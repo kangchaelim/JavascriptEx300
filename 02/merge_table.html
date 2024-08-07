@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 2-24에 <table>태그 적용</title>
+</head>
+<body>
+    <script>
+        let name = "홍길동";
+        let age = 30;
+        let text = "";
+
+        text = text + "<table border='1'>";
+        text = text + "<tr><th>이름</th><th>나이</th></tr>";
+        text = text + "<tr><td>" + name + "</td><td>" + age + "</td></tr>";
+        text = text + "</table>"
+
+        document.write(text);
+    </script>
+</body>
+</html>
