@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할당 연산자 +=의 문자열 적용 예</title>
+</head>
+<body>
+    <script>
+        let name = "홍길동";
+        let tel = "010-1234-5678";
+        let age = 30;
+
+        let text = "";       // 변수 text에 Null값, ""를 저장합니다.
+        text += "<table border ='1'>"  // 할당 연산자 +=를 이용하여 변수 text에 표와 관련된<table> 태그들과 표의 내용을 삽입합니다.
+        text += "<tr><th>이름</th><th>전화번호</th><th>나이</th></tr>";
+        text += "<tr><td>" + name + "</td><td>" + tel + "</th><th>" + age + "</th></tr>";
+        text += "</table>";
+
+        document.write(text);
+    </script>
+</body>
+</html>
