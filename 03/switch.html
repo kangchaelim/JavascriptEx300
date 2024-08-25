@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch 문으로 작성한 사칙연산 프로그램</title>
+</head>
+<body>
+    <script>
+        let num1 = 10;
+        let num2 = 20;
+        let operator = "/";
+
+        switch(operator){
+            case "+":
+                result = num1 + num2;
+                alert(num1 + "+" + num2 + "=" + result);
+                break;
+            case "-":
+            result = num1 - num2;
+            alert(num1 + "-" + num2 + "=" + result);
+            break;
+            case "*":
+            result = num1 + num2;
+            alert(num1 + "*" + num2 + "=" + result);
+            break;  
+            case "/":
+            result = num1 / num2;
+            alert(num1 + "/" + num2 + "=" + result);
+            break;       
+            default:
+            alert("입력오류!");
+            break;
+        }
+        // Switch 문은 If문과 거의 같은 방식으로 동작됩니다. 어떤 상황에서는 If문 대신 Switch문을 사용하면 프로그램을 좀 더 편리하고 간결하게 작성할 수 있습니다.
+
+        // Switch 문의 변수 operator의 값에 따라 해당 case의 문장들이 실행됩니다.
+        // 현재 operator가 '/' 값을 가지기 때문에 case "/": 다음에 있는 문장들이 수행되어 실행 결과에서와 같이 '10/20=0.5'가 출력됩니다.
+    </script>
+</body>
+</html>
