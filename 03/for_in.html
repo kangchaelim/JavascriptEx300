@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In 사용법 알아보기</title>
+</head>
+<body>
+    <script>
+        const member = {id:"kdong", name:"홍길동", age:30};
+
+        for(let x in member){
+            document.write(member[x] + "<br>");
+        }
+
+        // For In 문은 객체 내 각 요소들을 반복해서 읽어와 그 키를 변수에 저장하는 식으로 반복 루프가 진행됩니다.
+        // 객체의 요소 수 만큼, 즉 세 번 반복 루프가 진행됩니다. 각 반복 루프마다 x는 member 객체의 키 이름(id, name, age)을 가집니다. 
+        // 따라서 member 객체의 요소들은 member[x]로 접근할 수 있습니다.
+    </script>
+</body>
+</html>
