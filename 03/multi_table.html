@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이중 For 문으로 전체 구구단 만들기</title>
+</head>
+<body>
+    <script>
+        let result;
+
+        for(let x=2; x<=9; x++){      // 2~9 단
+            for(let y=1; y<=9; y++){
+                result = x*y;
+                document.write(x + "x" + y + "=" + result + " ");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

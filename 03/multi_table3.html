@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 표에 table 태그 적용하기</title>
+</head>
+<body>
+    <h3>구구단 표</h3>
+    <p id="show"></p>
+    <script>
+        let result;
+        let text = "";  // Null로 초기화
+
+        text += "<table border='1'>";
+        for (let y=1; y<=9; y++){
+            text += "<tr>";
+            for(let x=2; x<=9; x++){
+                result = x*y;
+                text += "<td>" + x + "x" + y + "=" + result + "</td>";
+            }
+            text += "</tr>";
+        }
+        text += "</table>";
+
+        document.getElementById("show").innerHTML = text;
+    </script>
+</body>
+</html>
