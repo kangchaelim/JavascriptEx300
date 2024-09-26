@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수의 매개변수와 반환 값 사용 예</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        function circleArea(r) {       // r은 매개변수 
+            let result = r*r*3.14;
+            return result;             // 함수 값의 반환
+        }
+
+        let radius = 8;                // radius 반지름
+        let area;                      
+
+        area = circleArea(radius);     // radius는 인수
+        document.getElementById("show").innerHTML = "원의 넓이:" + area; 
+    
+        // 매개변수는 호출 함수 측에서 사용된 변수나 데이터 값, 즉 인수를 전달받는 데 사용됩니다.
+        // 함수 정의에서 얻은 결괏값은 키워드 return에 의해 호출한 함수 측에 반환됩니다.
+    </script>
+</body>
+</html>

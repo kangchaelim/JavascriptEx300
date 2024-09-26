@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수를 이용한 섭씨/화씨 변환</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        function cf2(a){
+            let b = (a * 1.8) + 32;
+            return b;
+        }
+
+        let c,f;
+        let text = ""
+        text += "---------------<br>";
+        text += "섭씨 화씨<br>";
+        text += "---------------<br>";
+
+        for(let c=-10; c<=40; c+=10){
+            text += c + " " + cf2(c) + "<br>";
+        }
+
+        document.getElementById("show").innerHTML = text;
+    </script>
+</body>
+</html>
