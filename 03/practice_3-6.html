@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mile, km;
+
+        document.write('------------------<br>')
+        document.write('마일 킬로미터<br>')
+        document.write('------------------<br>')
+        for(mile=1;mile<=100;mile+=2){
+            km = mile * 1.609344;
+            km = km.toFixed(2);
+            document.write(mile + " => " + km + "<br>");
+        }
+    </script>
+</body>
+</html>
