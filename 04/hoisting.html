@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 호출이 함수 정의보다 먼저</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        let x;
+        x = mulFunc(10, 20);        // 함수 호출
+        document.getElementById("show").innerHTML = x;
+
+        function mulFunc(a,b){      // 함수 정의
+            return a*b;
+        }
+
+        // 자바스크립트는 기본적으로 변수나 함수 정의부를 프로그램 제일 앞으로 끌어 올립니다.
+        // 이것을 호이스팅(hoisting)이라고 부르며, 우리말로 '끌어 올리기'란 의미입니다.
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수 사용 예</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        const z = (x,y) => x + y;
+        // const z = (x, y) => {return x + y};
+        document.getElementById("show").innerHTML = z(10, 20);
+
+        // 화살표 함수는 익명 함수를 축약해서 표현하는 형태. 익명 함수에서 사용되는 function, return, {} 대신 화살표(=>) 기호 사용.
+    </script>
+</body>
+</html>

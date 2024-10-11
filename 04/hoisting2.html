@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수에서는 호이스팅이 적용되지 않음</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        let x;
+        x = mulFunc(10,20);             // 함수 호출
+        document.getElementById("show").innerHTML = x;
+
+        const mulFunc = function(a,b){  // 함수 정의
+            return a*b;
+        }
+
+        // 오류 발생
+        // 익명 함수의 경우에는 일반적인 함수와 달리 함수를 정의하여 변수를 저장해서 사용하는 형태이기 때문에 반드시 함수 호출 이전에 익명 함수를 선언하여 사용해야 합니다.
+    </script>
+</body>
+</html>

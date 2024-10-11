@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기호출 익명 함수 사용 예</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        ( function(){
+            document.getElementById("show").innerHTML = "안녕하세요~!";
+        }) ();
+    </script>
+</body>
+</html>

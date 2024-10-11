@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명 함수 저장 변수를 다른 변수에 대입</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        const mul = function(a,b) {return a * b}        
+
+        const mul2 = mul;
+        let x = mul2(3,4);
+        document.getElementById("show").innerHTML = x;
+        // 12
+        
+        // 익명 함수는 변수를 선언하는 것과 같기 때문에 익명 함수에 의해 생성되는 함수의 이름을 쉽게 변경할 수 있습니다.
+    </script>
+</body>
+</html>
