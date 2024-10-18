@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수의 기본 값</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        function addFunc(a,b=5){  // 매개변수 b의 기본 값을 5로 설정
+            return a+b;                    
+        }
+
+        document.getElementById("show").innerHTML = addFunc(10);
+        // 15
+
+        // 자바스크립트 함수에서는 인수와 매개변수 개수가 일치하지 않아도 오류가 발생X
+        // 위 예제와 같이 함수 호출에서 전달되는 인수의 개수와 함수 정의에서 사용되는 매개변수의 개수가 다른 경우에는 매개변수의 기본 값을 설정해야 한다.
+    </script>
+</body>
+</html>

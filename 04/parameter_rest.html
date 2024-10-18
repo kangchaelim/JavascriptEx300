@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나머지 매개변수 사용 예</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        function sumScores(...scores){       // 매개변수 scores는 sumScores() 함수 호출 시 전달받은 네 개의 값(70, 80, 90, 100)을 배열 형태로 가지고 있다.
+            let sum = 0;
+            for(let score of scores){
+                sum += score;
+            }
+            return sum;
+        }
+
+        let sum = sumScores(70, 80, 90, 100);    // 함수의 인수 70, 80, 90, 100이 나머지 매개변수 scores에 배열 형태로 전달된다. 
+        document.getElementById("show").innerHTML = "합계:" + sum;
+
+        // 자바스크립트에서는 함수 정의 시 매개변수의 개수를 미리 정하지 않고 매개변수의 수를 무한대로 설정할 수 있다.
+        // 이 때 사용되는 매개변수를 나머지 매개변수라고 한다. 매개변수의 기호는 ...을 사용
+    </script>
+</body>
+</html>

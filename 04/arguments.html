@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments 객체 사용 예</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        function maxScores(){                  
+            let max = -Infinity;  // Infinity는 전역 스코프에서 사용할 수 있는 전역 객체의 프로퍼티
+            for(let i = 0; i < arguments.length; i++){   // arguments 객체는 함수 호출 시 전달 받은 인수 87, 79, 93, 75, 68, 90, 88을 배열 형태로 저장함.
+                // arguments.length는 7 => For루프에서 변수 i는 0~6의 값을 가진다.
+                if(arguments[i] > max){
+                    max = arguments[i];
+                }
+            }
+            return max;
+        }
+
+        let max_score = maxScores(87, 79, 93, 75, 68, 90, 88);
+        document.getElementById("show").innerHTML = "최고점수: " + max_score;
+
+        // Infinity 프로퍼티는 양의 무한대를 나타내는 일종의 전역 변수
+        // -Infinity는 음의 무한대 => 컴퓨터로 표현할 수 있는 가장 작은 수 
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매개변수와 인수의 개수가 같은 경우</title>
+</head>
+<body>
+    <p id="show"></p>
+    <script>
+        function addFunc(a, b=5){
+            return a + b;
+        }
+
+        document.getElementById("show").innerHTML = addFunc(10, 50);
+        // 60
+
+        // 매개변수 b는 기본 값 대신 전달받은 50의 값을 가진다.
+    </script>
+</body>
+</html>
