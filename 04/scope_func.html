@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지역 변수 사용 예</title>
+</head>
+<body>
+    <script>
+        function func(){
+            let x = 10;   // 지역 변수
+            document.write(x + "<br>");   // 함수 스코프
+        }
+
+        func();
+        document.write(x);   // 전역 스코프
+
+        // 10
+        // console창 오류 => Uncaught ReferenceError: x is not defined at scope_func.html:16:24Understand this errorAI
+    </script>
+</body>
+</html>

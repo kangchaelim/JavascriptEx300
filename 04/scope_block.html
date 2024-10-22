@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>블록 스코프에 사용된 변수</title>
+</head>
+<body>
+    <script>
+        function func(){
+            if(true){
+                let x = 10;   // 블록 내부
+            }
+            document.write(x + "<br>");   // 블록 외부
+        }
+
+        func();
+
+        // console창 오류 => scope_block.html:14 Uncaught ReferenceError: x is not defined at func (scope_block.html:14:28) at scope_block.html:17:9
+    </script>
+</body>
+</html>
