@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클로저를 이용한 카운터</title>
+</head>
+<body>
+    <button onclick="incCounter()"> + </button>
+    <p id="show">0</p>
+
+    <script>
+        const increase = ( function (){
+            let counter = 0;
+            return function(){
+                counter += 1;
+                return counter;
+            }
+        })();
+
+        function incCounter(){
+            document.getElementById("show").innerHTML = increase();
+        }
+
+        // 자기호출 익명함수 사용(함수 정의와 호출이 동시에 일어나 바로 실행되는 함수)
+        // 자기호출 함수는 한 번만 실행됨. 변수 counter를 0으로 리셋한 뒤 counter 값을 1증가시킨 후 counter를 반환하는 익명함수를 반환합니다.
+
+        // 버튼 '+' 클릭하면 inCounter()를 호출한다. increase() 함수는 counter를 1증가시키고 그 값을 함수 값으로 반환한다.      
+        // 자바스크립트에서는 increase() 함수 호출 후 실행이 종료되어도 함수 내에서 사용된 지역 변수 counter가 내부의 익명 함수에서 사용되고 있기 때문에 그 값을 계속 유지한다.
+        // 자바스크립트의 클로저는 함수가 다른 함수 내에서 정의되고, 그 외부 함수의 변수에 접근할 수 있는 함수이다. 하나의 함수가 실행 종료 되어도 내부에서 사용된 지역 변수를 유효한 값으로 유지하게 해준다. 
+    </script>
+</body>
+</html>

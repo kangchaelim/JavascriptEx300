@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운터에 지역 변수 사용하기</title>
+</head>
+<body>
+    <button onclick="incCounter()"> + </button>
+    <p id="show">0</p>
+
+    <script>
+         const incCounter = function(){
+            let counter = 0;    // counter:지역 변수
+            counter += 1;
+            document.getElementById("show").innerHTML = counter;
+         }
+
+         // 지역 변수는 익명 함수 incCounter()가 호출된 다음 호출이 끝나면 변수의 생명이 다하기 때문에 함수가 호출될 때마다 counter값이 0으로 리셋된다.
+         // 따라서 버튼을 클릭해도 카운터는 1로 고정되어 있다.
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카운터에 전역 변수 사용하기</title>
+</head>
+<body>
+    <button onclick="incCounter()"> + </button>
+    <p id="show">0</p>
+
+    <script>
+         let counter = 0;    // counter:전역변수
+
+         const incCounter = function(){
+            counter += 1;
+            document.getElementById("show").innerHTML = counter;
+         }
+    </script>
+</body>
+</html>
