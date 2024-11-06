@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>클로저 활용 예</title>
-</head>
-<body>
-   <button type="button" onclick="changeColor()">색상 변경</button>
-   <div id="box" style="width: 100px; height: 100px; background-color: green;"></div>
-   <div id="show"></div> <!-- 토글 값 표시용 -->
+  </head>
+  <body>
+    <button type="button" onclick="changeColor()">색상 변경</button>
+    <div
+      id="box"
+      style="width: 100px; height: 100px; background-color: green"
+    ></div>
+    <div id="show"></div>
+    <!-- 토글 값 표시용 -->
 
-   <script>
-    const box = document.getElementById("box");
-    const showToggle = document.getElementById("show");
+    <script>
+      const box = document.getElementById("box");
+      const showToggle = document.getElementById("show");
 
-    const toggleBoxColor = (function(){   // 자기호출 익명함수를 사용해 toggleBoxColor라는 클로저를 생성한다.
-        let toggle = false;   // toggle이라는 let 변수가 정의되며, 초기값은 false. toggleBoxColor 클로저 내부에 유지되어 매번 호출될 때마다 toggle 값을 반전시킴.
-        return function(){
-            box.style.backgroundColor = toggle ? 'blue' : 'red';
-            toggle = !toggle;
-            return toggle;
-        }
-    })();
+      const toggleBoxColor = (function () {
+        // 자기호출 익명함수를 사용해 toggleBoxColor라는 클로저를 생성한다.
+        let toggle = false; // toggle이라는 let 변수가 정의되며, 초기값은 false. toggleBoxColor 클로저 내부에 유지되어 매번 호출될 때마다 toggle 값을 반전시킴.
+        return function () {
+          box.style.backgroundColor = toggle ? "blue" : "red"; // 삼항 연산자를 사용하여 toggle값에 따라 box의 배경색 설정.
+          toggle = !toggle; // toggle값 반전 시킴. toggle 변수가 true일 경우 !toggle은 false가 되고, toggle 변수가 false일 경우 !toggle은 true가 된다.
+          return toggle;
+        };
+      })();
 
-    function changeColor(){
+      function changeColor() {
         showToggle.innerHTML = toggleBoxColor();
-    }
+      }
 
-    // function changeColor(){
-    //     toggleBoxColor();
-    // }
-    // 만약 toggle 값을 화면에 표시하지 않고 색상 변경만 하고 싶다면, changeColor() 함수를 위처럼 변경
-    // 클로저는 '부모 함수가 종료된 후에도 부모 스코프에 접근할 수 있는 기능을 가진 함수이다.'라고 정의할 수 있음.
-   </script>
-</body>
+      // function changeColor(){
+      //     toggleBoxColor();
+      // }
+      // 만약 toggle 값을 화면에 표시하지 않고 색상 변경만 하고 싶다면, changeColor() 함수를 위처럼 변경
+      // 클로저는 '부모 함수가 종료된 후에도 부모 스코프에 접근할 수 있는 기능을 가진 함수이다.'라고 정의할 수 있음.
+    </script>
+  </body>
 </html>

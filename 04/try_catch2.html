@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>try~catch문으로 입력창 체크하기</title>
+  </head>
+  <body>
+    <h3>0~9숫자가 입력되었는지 체크하기</h3>
+    <input id="input1" type="text" /><span id="show"></span><br />
+    <button onclick="checkInput()">확인</button>
+
+    <script>
+      function checkInput() {
+        let input_elem = document.getElementById("input1");
+        let a = input_elem.value;
+        document.getElementById("show").innerHTML = "";
+        try {
+          if (a == "") throw "비어 있습니다."; // a가 Null이면 강제오류를 발생시키고 오류 메세지 나옴
+          if (isNaN(a)) throw "숫자가 아닙니다."; // a가 숫자가 아니면 true값을 가짐
+          a = Number(a); // Number(a)는 키보드로 입력된 문자열(아스키 코드)값을 숫자 데이터 형으로 변환한다.
+          if (a < 0 || a > 9) throw "0~9 사이 숫자가 아닙니다.";
+        } catch (err) {
+          document.getElementById("show").innerHTML = "오류: " + err;
+        }
+      }
+
+      // throw문은 강제로 오류를 발생시키고 싶은 경우에 쓰인다.
+      // Number()을 쓰는 이유는?
+      // HTML 입력 필드는 기본적으로 텍스트 형식이므로 사용자가 숫자를 입력하더라도 input.value는 문자열로 반환된다.
+      // 예를 들어, 입력값이 5라면, 이는 '5'라는 문자열이다. 숫자 데이터로 처리하기 위해서는 이를 명시적으로 숫자로 변환해야 한다.
+    </script>
+  </body>
+</html>
