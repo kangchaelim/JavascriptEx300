@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>중첩된 객체의 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const obj1 = {
+        id: "kdong",
+        name: "홍길동",
+        hobby: {
+          hobby1: "게임",
+          hobby2: "탁구",
+          hobby3: "기타",
+          // 객체 obj1의 프로퍼티 hobby는 값으로 객체(프로퍼티: hobby1, hobby2, hobby3)를 가지고 있습니다.
+          // 이와 같이 객체 안에 객체가 포함된 것을 중첩 객체라고 부릅니다.
+        },
+      };
+
+      let text = "";
+      text += obj1.hobby.hobby1 + "<br>";
+      text += obj1.hobby.hobby2 + "<br>";
+      text += obj1.hobby.hobby3 + "<br>";
+      // 중첩 객체에 접근하기 위해서 점(.) 연산자를 두 번 사용합니다.
+      // text += obj1["hobby"]["hobby1"]도 가능
+
+      document.getElementById("show").innerHTML = text;
+
+      //   게임
+      //   탁구
+      //   기타
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For In 문으로 객체의 프로퍼티 읽기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const member = {
+        id: "kdong",
+        name: "홍길동",
+        age: 30,
+      };
+
+      let text = "";
+      for (x in member) {
+        // x는 객체 member에 존재하는 프로퍼티의 키 이름을 가진다. 따라서 반복 루프에서 x의 값은 id, name, age가 된다.
+        text += member[x] + "<br>"; // 반복 루프 내에 있는 member[x]는 'kdong', '홍길동', 30의 값을 가진다.
+      }
+      document.getElementById("show").innerHTML = text;
+    </script>
+  </body>
+</html>

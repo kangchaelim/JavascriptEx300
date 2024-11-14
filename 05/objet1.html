@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체 생성의 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const member = {
+        // 객체 member 생성. 객체를 생성할 때는 일반적으로 키워드 const를 사용한다.
+        // member 객체는 id, name, age 세 개의 프로퍼티로 구성된다.
+        id: "kdhong",
+        name: "홍길동",
+        age: 30,
+        // id, name, age를 키(key)라고 부르고 이에 대응되는 kdong, 홍길동, 30을 값(value)라고 한다.
+      };
+      let text;
+      text = member.id + " " + member.name + " " + member.age;
+      document.getElementById("show").innerHTML = text;
+
+      // kdhong 홍길동 30
+    </script>
+  </body>
+</html>

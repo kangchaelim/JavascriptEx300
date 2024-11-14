@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체에 프로퍼티 추가하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const member = {
+        id: "kdong",
+        name: "홍길동",
+        age: 30,
+      };
+      member.email = "kdong@korea.com";
+
+      let text = "";
+      for (x in member) {
+        text += "키: " + x + ", 값: " + member[x] + "<br>";
+      }
+      document.getElementById("show").innerHTML = text;
+
+      // 키: id, 값: kdong
+      // 키: name, 값: 홍길동
+      // 키: age, 값: 30
+      // 키: email, 값: kdong@korea.com
+    </script>
+  </body>
+</html>

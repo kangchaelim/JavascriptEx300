@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>대괄호([])를 이용하여 프로퍼티 읽기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const score = {
+        kor: 80,
+        eng: 90,
+        math: 100,
+      };
+
+      let sum, avg;
+      sum = score["kor"] + score["eng"] + score["math"]; // 객체 score의 프로퍼티를 읽기 위해 대괄호([])를 사용한다.
+      // sum = score.kor + score.eng + score.math; 점(.) 연산자를 이용하여 프로퍼티 값을 읽어올 수도 있다.
+      avg = sum / 3;
+
+      document.getElementById("show").innerHTML =
+        "합계: " + sum + ", 평균: " + avg;
+
+      // 합계: 270, 평균: 90
+    </script>
+  </body>
+</html>
