@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>생성자 함수 후 메서드 추가</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      function Member(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+      }
+
+      Member.company = "현대";
+
+      const mem1 = new Member("kdhong", "홍길동", 25);
+
+      let text = "";
+      text += mem1.name + "<br>";
+      text += mem1.company;
+      document.getElementById("show").innerHTML = text;
+
+      // 홍길동
+      // undefined
+
+      // 이미 생성된 생성자 함수에는 새로운 프로퍼티를 추가할 수 없다. 프로퍼티는 생성자 함수 내에 존재해야 한다.
+      // 생성자 함수 외부에서 프로퍼티나 메서드를 추가하려면 프로토타입을 이용해야 한다.
+    </script>
+  </body>
+</html>

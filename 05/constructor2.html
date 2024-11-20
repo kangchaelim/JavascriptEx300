@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>생성자 함수에서 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      function Member(id, name, age) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.getName = function () {
+          return "나의 이름은 " + this.name + "입니다.";
+          // 생성자 함수 Member의 getName() 메서드를 정의한다.
+          // this.name은 생성자 함수 Member()로 생성되는 객체 자신의 프로퍼티를 의미한다.
+        };
+      }
+
+      const mem1 = new Member("kdhong", "홍길동", 25);
+      let text = "";
+      text += mem1.id + "<br>";
+      text += mem1.getName();
+      document.getElementById("show").innerHTML = text;
+
+      // kdhong
+      // 나의 이름은 홍길동입니다.
+    </script>
+  </body>
+</html>
