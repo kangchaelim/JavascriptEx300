@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스의 정적 메서드</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      class Member {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        getName() {
+          return "나의 이름은 " + this.name + " 입니다.";
+        }
+        static getCountry() {
+          // getCountry()는 정적 메서드입니다.
+          // 클래스에서 정적 메서드를 사용할 때에는 메서드 이름 앞에 키워드 static을 붙입니다.
+          // 정적 메서드는 객체에 소속된 것이 아닌 클래스 자체에 속하는 메서드입니다.
+          return "한국인입니다.";
+        }
+      }
+
+      const mem1 = new Member("홍길동", 30);
+      let text = "";
+      text += mem1.getName() + "<br>";
+      text += Member.getCountry();
+      // text = mem1.getCountry(); <= 오류 발생됨
+      document.getElementById("show").innerHTML = text;
+
+      // 나의 이름은 홍길동 입니다.
+      // 한국인입니다.
+
+      // 위의 예에서와 같이 정적 메서드는 어떤 특정한 객체가 아닌 클래스에 속한 메서드를 구현하는 데 사용됩니다.
+      // 그리고 정적 메서드는 클래스를 통해 호출할 수 있습니다.
+    </script>
+  </body>
+</html>

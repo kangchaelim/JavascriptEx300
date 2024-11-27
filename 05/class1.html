@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트의 클래스 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      class Member {
+        constructor(name, age) {
+          // 생성자 constructor()는 new 연산자에 의해 자동으로 호출되어 객체의 기본 상태를 설정하는 데 사용된다.
+          this.name = name;
+          this.age = age;
+        }
+        getAge() {
+          return "나이는 " + this.age + "살 입니다.";
+        }
+      }
+
+      const mem1 = new Member("홍길동", 30);
+
+      let text = "";
+      text += mem1.name + "<br>";
+      text += mem1.getAge();
+      document.getElementById("show").innerHTML = text;
+
+      // 홍길동
+      // 나이는 30살 입니다.
+
+      // class는 객체를 생성하기 위한 틀, 즉 템플릿이다. 함수와 유사한 구조를 가지고 특별한 함수라고 볼 수 있다.
+    </script>
+  </body>
+</html>
