@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자와 문자열 간의 덧셈과 곱셈 연산</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let a = 3; // 숫자
+      let b = 5; // 숫자
+      let c = "3"; // 문자열
+      let d = "5"; // 문자열
+
+      let result1 = a + b;
+      let result2 = c + d; // 문자열 "3"과 문자열 "5"에 대한 덧셈 기호(+)는 문자열 연결 연산자가 된다.
+      let result3 = a + d; // 숫자와 문자열에 대한 덧셈 연산에서 어느 한 쪽이 문자열인 경우 나머지 한 쪽의 숫자는 문자열로 자동 변환된다.
+      let result4 = c * d; // 문자열 "3"과 문자열 "5"에 대한 곱셈(*) 연산에서는 문자열 "3"과 "5"가 숫자로 자동 변환되어 3*5의 결과인 15를 얻는다.
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2 + "<br>";
+      text += result3 + "<br>";
+      text += result4;
+      document.getElementById("show").innerHTML = text;
+      // 8
+      // 35
+      // 35
+      // 15
+    </script>
+  </body>
+</html>

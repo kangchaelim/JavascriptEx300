@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>0으로 나누었을 때 발생된 무한대</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let x = 10;
+
+      text = "";
+      text += x / 0 + "<br>";
+      text += -x / 0 + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // Infinity
+      // -Infinity
+      // 자바스크립트에서는 어떤 수를 0으로 나누면 Infinity(또는 -Infinity) 값이 반환됩니다.
+    </script>
+  </body>
+</html>

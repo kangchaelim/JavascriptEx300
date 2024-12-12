@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>자바스크립트에서 사용되는 숫자</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let a = 235.27; // 부동 소수점
+      let b = -12; // 정수
+      let c = 253e8; // 양의 지수
+      let d = 253e-8; // 음의 지수
+
+      let text = "";
+      text += a + "<br>";
+      text += b + "<br>";
+      text += c + "<br>";
+      text += d;
+
+      document.getElementById("show").innerHTML = text;
+
+      // 235.27
+      // -12
+      // 25300000000
+      // 0.00000253
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>숫자와 문자열 간의 나눗셈 연산</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let a = 10;
+      let b = "lion";
+      let c = "2";
+
+      let result1 = a / b;
+      let result2 = a / c;
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2 + "<br>";
+      text += isNaN(result1) + "<br>"; // NaN은 'Not a Number'의 약어
+      text += isNaN(result2);
+      document.getElementById("show").innerHTML = text;
+
+      // NaN
+      // 5
+      // true
+      // false
+
+      // 숫자와 문자열 간에 사칙 연산(덧셈 연산 제외)을 하면 서로 연산을 할 수 없기 때문에 NaN의 결과가 나오게 됩니다.
+      // 예외적으로 숫자와 문자열 간의 덧셈 연산인 경우는 숫자가 문자열로 자동 변환되어 서로 연결되어 하나의 문자열로 합쳐집니다.
+    </script>
+  </body>
+</html>

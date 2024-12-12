@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>거듭 제곱 연산 계속으로 발생한 무한대</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let x = 10;
+      let text = "";
+
+      while (x != Infinity) {
+        x = Math.pow(x, 2);
+        // x = x*x와 동일.
+        // Math 객체의 pow() 메서드인 Math.pow()는 거듭 제곱 연산한 결과를 반환합니다.
+        // 예를 들어 Math.pow(2, 3)은 2의 세제곱을 의미합니다.
+        // while 문의 반복 루프는 x의 값이 Infinity가 되는 순간 종료됩니다.
+        text += x + "<br>";
+      }
+      document.getElementById("show").innerHTML = text;
+      // 100
+      // 10000
+      // 100000000
+      // 10000000000000000
+      // 1e+32
+      // 1.0000000000000002e+64
+      // 1.0000000000000003e+128
+      // 1.0000000000000005e+256
+      // Infinity
+
+      // 자바스크립트에서는 무한대 수를 표현하기 위해 Infinity(양의 무한대)와 -Infinity(음의 무한대) 프로퍼티를 사용합니다.
+    </script>
+  </body>
+</html>
