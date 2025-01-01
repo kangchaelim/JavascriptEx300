@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전역 메서드 parselnt()로 정수 변환</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let a = "10";
+      let b = "10.123";
+      let c = "  10";
+      let d = "apple";
+
+      let text = "";
+      text += parseInt(a) + "<br>";
+      text += parseInt(b) + "<br>";
+      text += parseInt(c) + "<br>";
+      text += parseInt(d) + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // 10
+      // 10
+      // 10
+      // NaN
+      // 전역 메서드 parseInt()는 변수나 데이터를 정수로 변환하는 데 사용된다.
+      // 정수란? 정수는 소수점이나 분수가 없는 숫자. 즉, 양수, 음수, 0으로 이루어진 숫자들이 정수에 해당.
+    </script>
+  </body>
+</html>

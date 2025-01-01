@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toPrecision() 메서드로 부동소수점 자릿수 구하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let x = 123.456789;
+
+      let text = "";
+      text += x.toPrecision() + "<br>";
+      text += x.toPrecision(3) + "<br>";
+      text += x.toPrecision(4) + "<br>";
+      text += x.toPrecision(5) + "<br>";
+      text += x.toPrecision(6) + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // 123.456789
+      // 123
+      // 123.5
+      // 123.46
+      // 123.457
+      // x.toPrecision(5)는 변수 x의 값 123.456789에서 전체 다섯자리까지의 값인 123.46을 반환합니다.
+    </script>
+  </body>
+</html>

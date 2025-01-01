@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAX_VALUE와 MIN_VALUE 값 확인하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let x = Number.MAX_VALUE;
+      let y = Number.MIN_VALUE;
+
+      let text = "";
+      text += x + "<br>";
+      text += y;
+      document.getElementById("show").innerHTML = text;
+
+      // 1.7976931348623157e+308
+      // 5e-324
+      // 자바스크립트로 표현 가능한 가장 큰 수와 작은 수를 나타냄.
+    </script>
+  </body>
+</html>

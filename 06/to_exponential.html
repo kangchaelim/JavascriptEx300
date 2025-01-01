@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toExponential() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let x = 123.456789;
+
+      let text = "";
+      text += x.toExponential() + "<br>";
+      text += x.toExponential(2) + "<br>";
+      text += x.toExponential(4) + "<br>";
+      text += x.toExponential(6) + "<br>";
+      document.getElementById("show").innerHTML = text;
+      // 1.23456789e+2
+      // 1.23e+2
+      // 1.2346e+2
+      // 1.234568e+2
+      // toExponential() 메서드는 지수(exponential) 표기로 반올림된 문자열을 반환합니다.
+    </script>
+  </body>
+</html>

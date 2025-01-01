@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toFixed() 메서드로 부동소수점 자릿수 구하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let x = 20.3648;
+
+      let text = "";
+      text += x.toFixed(0) + "<br>";
+      text += x.toFixed(1) + "<br>";
+      text += x.toFixed(2) + "<br>";
+      text += x.toFixed(3);
+      document.getElementById("show").innerHTML = text;
+
+      // 20
+      // 20.4
+      // 20.36
+      // 20.365
+      // toFixed(2)는 소수점 둘째 자리까지 구합니다. 반올림은 셋째 자리에서 일어납니다.
+    </script>
+  </body>
+</html>

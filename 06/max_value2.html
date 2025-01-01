@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAX_VALUE와 MIN_VALUE 값 확인하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let factorial = 1;
+      for (let i = 1; i <= 10000; i++) {
+        factorial *= i;
+
+        if (factorial > Number.MAX_VALUE) {
+          document.write("계산 범위를 벗어났습니다.");
+          break;
+        } else {
+          document.write(factorial + "<br>");
+        }
+      }
+      //    1
+      // 2
+      // 6
+      // .
+      // .
+      // 9.003691705778433e+297
+      // 1.5036165148649983e+300
+      // 2.526075744973197e+302
+      // 4.2690680090047027e+304
+      // 7.257415615307994e+306
+      // 계산 범위를 벗어났습니다.
+    </script>
+  </body>
+</html>

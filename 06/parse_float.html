@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>전역 메서드 parseFloat()로 부동소수점 숫자 변환</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let a = "10";
+      let b = "10.123";
+      let c = "  10";
+      let d = "apple";
+
+      let text = "";
+      text += parseFloat(a) + "<br>";
+      text += parseFloat(b) + "<br>";
+      text += parseFloat(c) + "<br>";
+      text += parseFloat(d) + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // 10
+      // 10.123
+      // 10
+      // NaN
+      // parseFloat()는 문자열을 부동 소수점 숫자로 변환하는 데 사용된다.
+      // 부동소수점 숫자란? 소수점을 포함할 수 있는 숫자.
+      // 정수도 부동소수점 형식으로 표현될 수 있다. 예를 들어, 10.0은 부동소수점으로 표현된 정수이다.
+    </script>
+  </body>
+</html>
