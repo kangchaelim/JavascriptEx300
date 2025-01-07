@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slice() 메서드로 문자열 추출하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "가는 말이 고와야 오는 말이 곱다.";
+      let text = "";
+      text += str1.slice(3, 8) + "<br>";
+      text += str1.slice(3) + "<br>";
+      text += str1.slice(-5) + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // 말이 고와
+      // 말이 고와야 오는 말이 곱다.
+      // 이 곱다.
+
+      // slice() 메서드는 문자열 내 특정 문자의 시작 위치와 끝 위치를 기준으로 문자열을 추출한다.
+    </script>
+  </body>
+</html>

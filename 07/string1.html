@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문자열에서 특정 문자 읽기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "안녕하세요.";
+
+      let text = "";
+      text += str1[0] + "<br>";
+      text += str1[2] + "<br>";
+      text += str1[4] + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // 안
+      // 하
+      // 요
+
+      // 문자란 글자, 공백, 특수문자, 숫자 등 문자열에 포함된 모든 것을 의미한다.
+    </script>
+  </body>
+</html>

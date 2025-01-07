@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문자열의 각 문자 For 문으로 읽어오기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "안녕하세요.";
+
+      let text = "";
+      for (let i = 0; i <= str1.length - 1; i++) {
+        text += str1[i] + "<br>";
+      }
+      document.getElementById("show").innerHTML = text;
+      // 안
+      // 녕
+      // 하
+      // 세
+      // 요
+      // .
+
+      // str1.length는 문자열 '안녕하세요.'의 길이를 의미하며 그 값은 6이 된다.
+    </script>
+  </body>
+</html>
