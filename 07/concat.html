@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>concat() 메서드로 문자열 연결하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "토끼";
+      let str2 = "거북이";
+
+      text = "";
+      text += str1.concat(str2) + "<br>";
+      text += str1.concat("와", str2) + "<br>";
+      text += str1;
+      document.getElementById("show").innerHTML = text;
+
+      // 토끼거북이
+      // 토끼와거북이
+      // 토끼
+
+      // concat() 메서드는 문자열들을 서로 연결한 새로운 문자열을 반환하고 원래의 문자열은 변경 되지 않고 기존 값을 유지한다.
+    </script>
+  </body>
+</html>

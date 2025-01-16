@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trimStart() 메서드로 문자열 앞 공백 삭제하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "    javascript string    ";
+      let str2 = str1.trimStart();
+
+      text = "";
+      for (let x of str2) {
+        if (x == " ") text += "#";
+        else text += x;
+        // j, a, v, a, s, c, r, i, p, t, s, t, r, i, n, g는 공백이 아니므로, 모두 text에 추가됩니다.
+      }
+
+      text += "<br>";
+      text += str1.length + "<br>";
+      text += str2.length;
+      document.getElementById("show").innerHTML = text;
+
+      // javascript#string####
+      // 25
+      // 21
+    </script>
+  </body>
+</html>

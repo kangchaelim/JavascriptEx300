@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "Apple apple apple apple apple";
+      let str2 = str1.replaceAll("apple", "orange");
+
+      text = "";
+      text += str2 + "<br>";
+      text += str1;
+      document.getElementById("show").innerHTML = text;
+
+      // Apple orange orange orange orange
+      // Apple apple apple apple apple
+
+      // 'Apple'의 경우 대문자가 포함되어 'apple'과 다른 문자열로 취급된다.
+      // 또한 str1.replaceAll()으로 메서드를 호출한 후에도 문자열 str1의 기존 값은 변경되지 않는다.
+    </script>
+  </body>
+</html>

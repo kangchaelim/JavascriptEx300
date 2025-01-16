@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>replace() 메서드로 문자열 치환하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "My friend or a friend of mine?";
+      let str2 = str1.replace("friend", "student");
+
+      text = "";
+      text += str2 + "<br>";
+      text += str1;
+      document.getElementById("show").innerHTML = text;
+
+      // My student or a friend of mine?
+      // My friend or a friend of mine?
+
+      // replace() 메서드는 첫 번째로 매치되는 문자열만 변경되고 그 다음 매치되는 문자열은 변경되지 않는다.
+      // 또한 str1.replace()으로 메서드를 호출한 후에도 문자열 str1의 기존 값은 변경되지 않는다.
+    </script>
+  </body>
+</html>

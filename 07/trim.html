@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>trim() 메서드로 문자열 양쪽 끝 공백 삭제하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "    javascript string    ";
+      let str2 = str1.trim();
+
+      text = "";
+      text += str2 + "<br>";
+      text += str1.length + "<br>";
+      text += str2.length;
+      document.getElementById("show").innerHTML = text;
+
+      // javascript string
+      // 25
+      // 17
+    </script>
+  </body>
+</html>

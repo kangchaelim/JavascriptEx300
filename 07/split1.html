@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>split() 메서드로 휴대폰 번호 분리하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let phone = "010-1234-5678";
+      let arr = phone.split("-");
+
+      text = "";
+      text += arr[0] + "<br>";
+      text += arr[1] + "<br>";
+      text += arr[2] + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // 010
+      // 1234
+      // 5678
+
+      // split() 메서드는 특정 문자열을 기준으로 문자열을 분리하여 배열 형태로 반환한다.
+      // phone.split("-")은 문자열 phone에 대해 '-'을 기준으로 문자열을 분리하여 배열로 반환한다.
+    </script>
+  </body>
+</html>
