@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>lastIndexOf() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "공든 탑이 무너지랴. 공자 앞에서 문자 쓴다.";
+      let idx = str1.lastIndexOf("공");
+
+      document.getElementById("show").innerHTML = idx;
+
+      // 12
+      // lastIndexOf() 메서드는 문자열에서 특정 문자열이 마지막으로 발생하는 위치를 반환한다.
+      // 만약 특정 문자열이 문자열 내에 존재하지 않으면 -1을 반환한다.
+      // lastIndexOf() 메서드와 indexOf() 메서드의 차이점은 lastIndexOf()는 문자열 뒤에서부터 검색을 시작하는 반면 indexOf()는 문자열 제일 앞(인덱스 0)에서 문자열 검색을 시작한다는 점이다.
+    </script>
+  </body>
+</html>

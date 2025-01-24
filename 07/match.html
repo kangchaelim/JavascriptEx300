@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>match() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "I am A student. I am from Korea.";
+      let arr = str1.match(/a/gi);
+
+      let text = "";
+      for (let i = 0; i <= arr.length - 1; i++) {
+        text += arr[i] + "<br>";
+      }
+      document.getElementById("show").innerHTML = text;
+
+      // a
+      // A
+      // a
+      // a
+
+      // /a/: 정규 표현식(Regular Expression)입니다. 여기서는 a라는 글자를 찾겠다는 의미입니다.
+      // g: global 플래그로, 문자열에서 모든 매치를 찾습니다. 만약 g 플래그가 없으면 첫 번째 일치하는 값만 반환합니다.
+      // i: ignore case 플래그로, 대소문자를 구분하지 않고 매치를 찾습니다. 즉, a뿐만 아니라 A도 찾습니다.
+
+      // arr[i]의 의미
+      // arr: 정규 표현식으로 찾은 결과를 담은 배열입니다. 예제에서 arr의 값은 ["a", "A", "a", "a"]입니다.
+      // arr[i]: 배열 arr에서 **인덱스 i**에 해당하는 값을 가져옵니다.
+      // 예를 들어, i = 0일 때 arr[0]은 "a"입니다.
+      // i = 1일 때 arr[1]은 "A"입니다.
+      // 이런 식으로 배열의 각 요소를 차례대로 가져오는 역할을 합니다.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indexOf() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "하늘의 별 따기. 하늘이 무너져도 솟아날 구멍이 있다.";
+      let idx1 = str1.indexOf("하늘");
+      let idx2 = str1.indexOf("하늘", 4);
+
+      text = "";
+      text += idx1 + "<br>";
+      text += idx2;
+      document.getElementById("show").innerHTML = text;
+
+      // 0
+      // 10
+      // str1.indexOf("하늘")은 문자열 str1에서 '하늘'이 처음 발생하는 위치, 즉 인덱스 0을 반환한다.
+      // str1.indexOf("하늘", 4)에서 4는 검색을 시작하는 위치를 의미한다. srt1을 검색할 때 인덱스 4부터 검색을 시작하여 '하늘'이 처음 발행하는 위치, 즉 인덱스 10을 반환한다.
+    </script>
+  </body>
+</html>
