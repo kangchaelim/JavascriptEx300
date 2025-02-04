@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>includes() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "강물도 오래 흐르면 바위에 구멍을 뚫는다.";
+
+      let result1 = str1.includes("바위");
+      let result2 = str1.includes("사과");
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2;
+      document.getElementById("show").innerHTML = text;
+
+      // true
+      // false
+
+      // includes() 메서드는 문자열 내에 특정 문자열이 존재하는지 검색하여 그 문자열이 존재하면 true를 반환하고 그렇지 않으면 false를 반환한다.
+    </script>
+  </body>
+</html>
