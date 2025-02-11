@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메타문자 \s의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "How are you!";
+      let pattern = /\s/g;
+      let result = str1.replace(pattern, "_");
+
+      document.getElementById("show").innerHTML = result;
+      // How_are_you!
+      // /\s/는 공백을 포함한 화이트 스페이스에 매치된다.
+    </script>
+  </body>
+</html>

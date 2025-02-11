@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메타문자 \d의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "Phone number : 010-1234-5678.";
+      let pattern = /\d/g;
+      let result = str1.match(pattern);
+
+      document.getElementById("show").innerHTML = result;
+      // 0,1,0,1,2,3,4,5,6,7,8
+      // /\d/는 0~9 숫자와 매치된다.
+    </script>
+  </body>
+</html>

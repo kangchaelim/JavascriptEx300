@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정규 표현식의 플래그 m의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = `I go to a School. My 
+school is a good 
+SCHOOL.`;
+      let pattern1 = /^school/;
+      let pattern2 = /^school/m;
+      let result1 = str1.replace(pattern1, "OFFICE");
+      let result2 = str1.replace(pattern2, "OFFICE");
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2;
+      document.getElementById("show").innerHTML = text;
+      // I go to a School. My school is a good SCHOOL.
+      // I go to a School. My OFFICE is a good SCHOOL.
+
+      // 정규 표현식의 플래그 m은 하나의 문자열이 여러 줄로 나누어져 있는 경우에 사용할 수 있다.
+    </script>
+  </body>
+</html>

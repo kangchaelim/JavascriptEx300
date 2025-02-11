@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메타문자 \S의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "How are you!";
+      let pattern = /\S/g;
+      let result = str1.replace(pattern, "#");
+
+      document.getElementById("show").innerHTML = result;
+      // ### ### ####
+      // /\S/는 /\s/와 반대의 매치를 의미한다. 따라서 공백을 포함한 화이트 스페이스를 제외한 문자와 매치된다.
+    </script>
+  </body>
+</html>

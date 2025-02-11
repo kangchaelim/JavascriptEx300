@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메타문자 점(.)의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "A cat gets haircut. c3t c_t.";
+      let pattern = /c.t/g;
+      let result = str1.match(pattern);
+
+      document.getElementById("show").innerHTML = result;
+
+      // c → 문자 'c'가 포함된 부분 찾기
+      // . → 임의의 문자 한 개와 일치
+      // (어떤 문자든 상관없음, 단 줄바꿈 문자는 제외)
+      // t → 문자 't'가 포함된 부분 찾기
+      // g → 문자열 전체에서 모든 일치하는 부분 찾기 (global 검색)
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>정규 표현식의 플래그 i의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "I go to a School. My school is a good SCHOOL.";
+      let pattern = /school/i;
+      let result = str1.replace(pattern, "office");
+
+      document.getElementById("show").innerHTML = result;
+      // I go to a office. My school is a good SCHOOL.
+
+      // /school/i에서 플러그 i는 'ignore case'의 약어이다. 따라서 문자열 'school'을 검색할 때 대소문자를 구분하지 않는다.
+    </script>
+  </body>
+</html>

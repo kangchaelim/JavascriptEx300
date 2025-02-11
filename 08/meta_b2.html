@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메타문자 \B의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "You are a student.Your restaurant is nice.";
+      let pattern1 = /\Bou/g;
+      let pattern2 = /e\B/g;
+      let result1 = str1.replace(pattern1, "_");
+      let result2 = str1.replace(pattern2, "_");
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2;
+      document.getElementById("show").innerHTML = text;
+
+      // Y_ are a student.Y_r restaurant is nice.
+      // You are a stud_nt.Your r_staurant is nice.
+
+      // 메타문자 \B는 \b와 반대로 특정 문자열로 시작하지 않는 단어나 특정 문자열로 끝나지 않는 단어를 검색하는 데 사용된다.
+    </script>
+  </body>
+</html>

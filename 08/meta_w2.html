@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메타문자 \W의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "Discount rate : 30%!";
+      let pattern = /\W/g;
+      let result = str1.match(pattern);
+
+      document.getElementById("show").innerHTML = result;
+      // , ,:, ,%,!
+      // /\W/는 영어 단어 문자(숫자, 밑줄(_) 포함) 이외의 문자와 매치된다.
+    </script>
+  </body>
+</html>
