@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수량자 ^의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "this that his.";
+      let pattern = /^th/g;
+      let result = str1.replace(pattern, "TH");
+
+      document.getElementById("show").innerHTML = result;
+      // THis that his.
+      // 수량자 ^는 검색하는 문자열이 가장 앞에 위치해야 할 때 사용된다. 예를 들어 /^You/는 'You'가 가장 앞에 오는 경우의 "You"를 검색한다.
+      // 검색 패턴 /^th/는 'th'가 문자열의 가장 처음에 오는 경우 'th'를 검색한다.
+    </script>
+  </body>
+</html>

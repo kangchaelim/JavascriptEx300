@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그룹 패턴 [^abc]의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "l love Ice Cream. Do you like it?";
+
+      let pattern1 = /[^ae]/g;
+      let pattern2 = /[^o-z]/g;
+      let pattern3 = /[^A-C]/g;
+      let result1 = str1.match(pattern1);
+      let result2 = str1.match(pattern2);
+      let result3 = str1.match(pattern3);
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2 + "<br>";
+      text += result3;
+      document.getElementById("show").innerHTML = text;
+
+      // l, ,l,o,v, ,I,c, ,C,r,m,., ,D,o, ,y,o,u, ,l,i,k, ,i,t,?
+      // l, ,l,e, ,I,c,e, ,C,e,a,m,., ,D, , ,l,i,k,e, ,i,?
+      // l, ,l,o,v,e, ,I,c,e, ,r,e,a,m,., ,D,o, ,y,o,u, ,l,i,k,e, ,i,t,?
+
+      // 그룹 패턴 [^abc]는 [abc]와는 반대로 a, b, c를 제외한 문자들과 매치된다.
+    </script>
+  </body>
+</html>

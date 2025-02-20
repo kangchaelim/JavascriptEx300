@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수량자 {m}의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "1 12 123 1234 12345 123456";
+      let pattern = /\d{3}/g;
+      let result = str1.match(pattern);
+
+      document.getElementById("show").innerHTML = result;
+      // 123,123,123,123,456
+      // 수량자 {m}은 앞의 문자가 m번 반복되는 패턴과 매치된다. 예를 들어 a{4}는 'aaaa'와 매치된다.
+      // 검색패턴 /\d{3}/은 0~9 숫자가 3번 반복되는 패턴, 즉 3자리 숫자와 매치된다.
+
+      // "1" → (1자리) → ❌ 매치 안됨
+      // "12" → (2자리) → ❌ 매치 안됨
+      // "123" → (3자리) → ✅ 매치됨 ("123")
+      // "1234" → 앞에서부터 3자리 → "123" ✅ 매치됨, "4"는 남음
+      // "12345" → 앞에서부터 3자리 → "123" ✅ 매치됨, "45"는 남음
+      // "123456" → 앞에서부터 3자리 → "123" ✅ 매치됨,
+      // "456" → 3자리이므로 한 번 더 매치됨 ✅
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>test() 메서드의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "Nice to meet you!";
+
+      let pattern = /[a-f]/g;
+      let result1 = pattern.test(str1);
+      let result2 = /[0-9]/g.exec(str1);
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2;
+      document.getElementById("show").innerHTML = text;
+
+      // true
+      // null
+
+      // test() 메서드는 문자열 내에서 특정 문자열을 검색하여 매치가 있으면 true를 반환하고, 그렇지 않으면 fale를 반환한다.
+      // exec() 메서드는 매치되는 문자열을 얻는 데 사용되고, test() 메서드는 매치되는 문자열의 존재 여부를 판단하는 데 사용된다.
+    </script>
+  </body>
+</html>

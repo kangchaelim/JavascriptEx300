@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>exec() 메서드의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "We are the world.";
+
+      let pattern = /are/g;
+      let result1 = pattern.exec(str1);
+      let result2 = /is/g.exec(str1);
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2;
+      document.getElementById("show").innerHTML = text;
+
+      // are
+      // null
+
+      // exec() 메서드는 문자열 내에서 특정 문자열을 검색하여 매치 결과를 배열로 반환한다. 만약 매치가 없으면 Null을 반환한다.
+    </script>
+  </body>
+</html>

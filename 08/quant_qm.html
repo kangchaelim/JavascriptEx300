@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수령자 ?의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "Ah okay! aahh! ahhhh!";
+      let pattern = /ah?/g;
+      let result = str1.match(pattern);
+      document.getElementById("show").innerHTML = result;
+
+      // a,a,ah,ah
+      // 수량자 ?는 바로 앞의 문자가 0번 또는 1번 이상 반복될 경우 매치된다. 예를 들어 /ab*/는 'a', 'ab' 문자열과 매치된다..
+      // 검색패턴 /ah?/는 'h'가 0번 또는 1번 반복되는 패턴과 매치된다.
+    </script>
+  </body>
+</html>

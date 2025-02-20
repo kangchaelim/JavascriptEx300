@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수량자 {m,n}의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "1 12 123 1234 12345 123456";
+      let pattern = /\d{4,5}/g;
+      let result = str1.match(pattern);
+
+      document.getElementById("show").innerHTML = result;
+
+      // 1234,12345,12345
+      // 수량자 {m,}은 앞의 문자가 m번 이상, n번 이하 반복되는 패턴과 매치된다. 예를 들어 a{4,6}는 'aaaa', 'aaaaa', 'aaaaaa'와 매치된다.
+    </script>
+  </body>
+</html>

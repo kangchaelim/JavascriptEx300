@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그룹 패턴 [x|y]의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "I am a boy. You are a girl. She is pretty.";
+
+      let pattern = /(am|are|is)/g;
+      let result = str1.match(pattern);
+
+      document.getElementById("show").innerHTML = result;
+
+      // am,are,is
+      // 그룹 패턴 (x|y)는 x또는 y와 매치된다. 자바스크립트의 OR 연산자와 유사한 역할을 한다.
+      // 그룹 패턴 [(x|y)]는 [abc]와 유사하지만 [(x|y)]인 경우에는 x나 y가 문자뿐만 아니라 다른 검색 패턴으로도 사용될 수 있다.
+      // 예를 들어 [(0-5)|you]는 0에서 5까지의 숫자 또는 문자열 'you'를 검색하는데 사용된다.
+    </script>
+  </body>
+</html>

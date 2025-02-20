@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수령자 +의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "Woops! Wooops! Woooops!";
+      let pattern = /o+/g;
+      let result = str1.match(pattern);
+      document.getElementById("show").innerHTML = result;
+
+      // oo,ooo,oooo
+      // 검색패턴 /o+/는 'o'가 1번 이상 반복되는 문자열을 의미한다. str1.match(pattern)은 'o'가 1번 이상 반복되는 'oo', 'ooo', 'oooo'를 요소로 하는 배열을 반환한다.
+    </script>
+  </body>
+</html>

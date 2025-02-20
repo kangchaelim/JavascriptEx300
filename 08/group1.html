@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그룹 패턴 [abc]의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "l love Ice Cream. Do you like it?";
+
+      let pattern1 = /[ae]/g;
+      let pattern2 = /[o-z]/g;
+      let pattern3 = /[A-C]/g;
+      let result1 = str1.match(pattern1);
+      let result2 = str1.match(pattern2);
+      let result3 = str1.match(pattern3);
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2 + "<br>";
+      text += result3;
+      document.getElementById("show").innerHTML = text;
+
+      // e,e,e,a,e
+      // o,v,r,o,y,o,u,t
+      // C
+
+      // 그룹 패턴 [abc]는 대괄호에 포함된 a, b, c중 하나라도 포함되면 매치된다. 예를 들어 [a=e]는 a~e, 즉 a, b, c, d, e 중 어느 것이 와도 매치됨을 의미한다.
+    </script>
+  </body>
+</html>

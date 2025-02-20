@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>그룹 패턴 [^0-9]의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "1 23 456 789 10 11";
+
+      let pattern1 = /[^13579]/g;
+      let pattern2 = /[^0-6]/g;
+      let result1 = str1.match(pattern1);
+      let result2 = str1.match(pattern2);
+
+      let text = "";
+      text += result1 + "<br>";
+      text += result2 + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // ,2, ,4,6, ,8, ,0,
+      // , , ,7,8,9, ,
+
+      // 그룹 패턴 [^0-9]는 0에서 9까지의 숫자를 제외한 문자와 매치된다.
+    </script>
+  </body>
+</html>

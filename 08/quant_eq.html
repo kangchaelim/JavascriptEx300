@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>수량자 ?=의 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let str1 = "his cat her cat your cat";
+      let pattern = /cat(?= your)/g;
+      let result = str1.replace(pattern, "CAT");
+
+      document.getElementById("show").innerHTML = result;
+      // his cat her CAT your cat
+      // 수량자 ?=는 문자 다음에 특정 문자가 나올 경우에만 검색된다. 예를 들어 /You(?=are)는 'You' 다음에 'are'가 오는 경우의 'You'를 검색한다.
+    </script>
+  </body>
+</html>
