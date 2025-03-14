@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pop() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const animals = ["사자", "호랑이", "사슴", "펭귄"];
+      let arr = animals.pop();
+
+      let text = "";
+      text += animals + "<br>";
+      text += "-반환값:" + arr;
+      document.getElementById("show").innerHTML = text;
+
+      //  사자,호랑이,사슴
+      // -반환값:펭귄
+      // pop() 메서드는 배열에 새로운 요소를 추가하는 push() 메서드와는 반대로 요소를 삭제하는 데 사용된다.
+      // animals.pop()은 배열 animals의 제일 마지막 요소인 '펭귄'을 삭제하고 삭제된 요소인 '펭귄'을 반환한다.
+    </script>
+  </body>
+</html>

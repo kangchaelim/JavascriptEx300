@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>push() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const animals = ["사자", "호랑이", "사슴", "펭귄"];
+      let x = animals.push("이구아나");
+
+      let text = "";
+      text += animals + "<br>";
+      text += "-반환값:" + x;
+      document.getElementById("show").innerHTML = text;
+
+      // 사자, 호랑이, 사슴, 펭귄, 이구아나
+      // -반환값:5
+
+      // push() 메서드는 배열의 끝에 새로운 요소를 추가하는 데 사용된다.
+      // push() 메서드의 반환 값은 배열의 길이이다.
+    </script>
+  </body>
+</html>

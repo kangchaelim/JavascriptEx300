@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열 요소 값의 변경</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const fruits = ["사과", "딸기", "참외"];
+      fruits[0] = "수박";
+
+      document.getElementById("show").innerHTML = fruits;
+      // 수박,딸기,참외
+      // 배열의 인덱스로 접근하여 요소에 값을 저장하면 요소 값이 변경된다.
+    </script>
+  </body>
+</html>

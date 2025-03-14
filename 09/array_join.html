@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>join() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const animals = ["사자", "호랑이", "사슴", "펭귄"];
+      let str1 = animals.join();
+      let str2 = animals.join("/");
+
+      let text = "";
+      text += str1 + "<br>";
+      text += str2;
+      document.getElementById("show").innerHTML = text;
+
+      // 사자, 호랑이, 사슴, 펭귄;
+      // 사자/호랑이/사슴/펭귄
+
+      // join() 메서드는 배열을 문자열로 변환하는 데 사용된다.
+      // join() 메서드의 매개변수는 문자열로 변환할 때 각 요소를 구분하는 문자를 나타낸다. 매개변수가 사용되지 않으면 기본 구분자인 콤마(,)가 사용된다.
+    </script>
+  </body>
+</html>
