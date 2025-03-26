@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find() 메서드의 기본 형</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const scores = [78, 84, 98, 100, 67, 87];
+      arr = scores.find(getScores);
+
+      function getScores(score) {
+        return score >= 90;
+      }
+
+      document.getElementById("show").innerHTML = arr;
+    </script>
+  </body>
+</html>

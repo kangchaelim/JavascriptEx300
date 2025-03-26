@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>find() 메서드의 기본 형</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const scores = [78, 84, 98, 100, 67, 87];
+      arr = scores.find(function (score) {
+        return score >= 90;
+      });
+      document.getElementById("show").innerHTML = arr;
+
+      // 98
+      // find() 메서드는 배열에서 특정 요소를 찾는 조건을 콜백 함수를 통해 전달하여 조건에 해당하는 첫번째 요소 값을 반환한다.
+      // scores.find() 메서드에서는 매개변수로 다음과 같은 콜백 함수가 사용된다.
+      // function(score){
+      //    return score >= 90;
+      // }
+      // 콜백 함수(Callback Function)란 다른 함수의 인자로 전달되어 실행되는 함수. 어떤 함수가 실행될 때 **"나중에 실행해줘!"**라고 넘겨주는 함수.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>indexOf() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const fruits = ["사과", "오렌지", "수박", "감", "수박", "딸기", "키위"];
+      let index1 = fruits.indexOf("수박"); // '수박'이 처음 발생하는 위치인 인덱스 2를 반환
+      let index2 = fruits.indexOf("수박", 3); // '수박'을 검색할 때 인덱스 3의 위치에서 시작함
+      let index3 = fruits.indexOf("바나나"); // '바나나'가 존재하지 않기 때문에 -1반환
+
+      let text = "";
+      text += index1 + "<br>";
+      text += index2 + "<br>";
+      text += index3;
+      document.getElementById("show").innerHTML = text;
+
+      // 2
+      // 4
+      // -1
+      // 자바스크립트 배열에서 특정 요소의 위치를 파악하는 데는 indexOf() 메서드를 사용하고 특정 요소의 존재 여부를 확인하기 위해서는 includes() 메서드가 사용된다.
+      // 배열에서 특정 요소를 추출하거나 검색하는 데에는 slice()와 find() 메서드가 사용된다. 그리고 forEach() 메서드를 이용하면 배열의 요소를 순회하면서 요소를 처리할 수 있다.
+      // 또한 map() 메서드는 배열 요소 각각에 함수를 적용하여 새로운 배열을 만드는 데 사용된다.
+    </script>
+  </body>
+</html>

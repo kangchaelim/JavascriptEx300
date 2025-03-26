@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slice() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const animals = ["사자", "호랑이", "사슴", "펭귄", "여우", "앵무새"];
+      let arr1 = animals.slice(1, 3);
+      let arr2 = animals.slice(2);
+      let arr3 = animals.slice(-3, -1);
+
+      let text = "";
+      text += arr1 + "<br>";
+      text += arr2 + "<br>";
+      text += arr3;
+      document.getElementById("show").innerHTML = text;
+
+      // 호랑이,사슴
+      // 사슴,펭귄,여우,앵무새
+      // 펭귄,여우
+      // animals.slice(1, 3)은 배열 animals에서 인덱스 1부터 인덱스 3 사이(3은 포함하지 않음)의 요소. 즉 1에서 2까지의 요소를 추출한 새로운 배열을 반환.
+      // animals.slice(-3, -1)는 배열 animals에 대해 끝에서 3번째 요소부터 끝에서 2번째 요소인 '펭귄', '여우'를 요소로 하는 새로운 배열을 반환.
+      // slice()메서드는 배열의 시작 인덱스와 끝 인덱스를 이용하여 요소를 추출하여 그 요소들로 구성된 새로운 배열을 만드는 데 사용된다.
+    </script>
+  </body>
+</html>
