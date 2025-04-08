@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const numbers = [1, 2, 3, 4, 5];
+      let arr = numbers.map(function (num) {
+        return num * num;
+      });
+      document.getElementById("show").innerHTML = arr;
+
+      // 1,4,9,16,25
+      // map() 메서드는 배열 각 요소에 대해 매개변수로 설정된 함수를 실행하여 얻어진 요소들로 구성된 새로운 배열을 반환한다.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach() 메서드로 배열의 요소 값과 인덱스 출력하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const animals = ["사자", "호랑이", "사슴", "펭귄"];
+      let text = "";
+      for (let i = 0; i < animals.length; i++) {
+        text += i + ": " + animals[i] + "<br>";
+      }
+      document.getElementById("show").innerHTML = text;
+    </script>
+  </body>
+</html>
