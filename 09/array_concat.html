@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>concat() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const animals1 = ["사자", "호랑이", "사슴", "펭귄"];
+      const animals2 = ["개미", "메뚜기", "풍뎅이"];
+
+      let arr = animals1.concat(animals2);
+      let text = "";
+      text += arr + "<br>";
+      text += animals1;
+      document.getElementById("show").innerHTML = text;
+
+      // 사자,호랑이,사슴,펭귄,개미,메뚜기,풍뎅이;
+      // 사자,호랑이,사슴,펭귄
+      // 두 개 이상의 배열을 서로 병합하는 데 사용한다.
+      // concat() 메서드는 병합된 새로운 배열을 반환하기 때문에 기존 배열 animals1과 animals2의 내용은 변경되지 않고 기존 값을 그대로 유지한다.
+    </script>
+  </body>
+</html>
