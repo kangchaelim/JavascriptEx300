@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2차원 배열 생성 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const arr = new Array(5); // 길이가 5인 1차원 배열을 먼저 만듦
+
+      for (var i = 0; i < arr.length; i++) {
+        arr[i] = new Array(3);
+      }
+      // arr의 각 요소마다 길이가 3인 배열을 할당
+      // 즉, arr[0] = [ , , ], arr[1] = [ , , ] 이런 식으로 채워짐
+
+      document.getElementById("show").innerHTML = arr;
+
+      // ,,,,,,,,,,,,,,
+
+      // JavaScript에서 2차원 배열을 동적으로 생성하는 방법
+    </script>
+  </body>
+</html>

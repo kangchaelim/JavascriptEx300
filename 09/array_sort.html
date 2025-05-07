@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sort() 메서드 사용 예</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const animals = ["코끼리", "사자", "호랑이", "사슴", "펭귄", "풍뎅이"];
+
+      let text = "";
+      animals.sort();
+      text += animals + "<br>";
+      animals.reverse();
+      text += animals;
+      document.getElementById("show").innerHTML = text;
+
+      // animals.sort()는 배열 animals의 요소들을 오름차순으로 정렬한다.
+      // animals.reverse()는 배열 animals의 요소들을 내림차순으로 정렬한다.
+    </script>
+  </body>
+</html>

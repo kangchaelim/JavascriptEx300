@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2차원 배열에 값 입력</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const arr = new Array(4);
+      for (var i = 0; i < arr.length; i++) {
+        arr[i] = new Array(3);
+      }
+
+      let num = 1;
+      for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 3; j++) {
+          arr[i][j] = num;
+          num++;
+        }
+      }
+
+      let text = "";
+      for (var i = 0; i < 4; i++) {
+        for (var j = 0; j < 3; j++) {
+          text += arr[i][j] + "";
+        }
+        text += "<br>";
+      }
+
+      document.getElementById("show").innerHTML = text;
+
+      // 123
+      // 456
+      // 789
+      // 101112
+
+      // 4행 3열(4×3)짜리 2차원 배열을 만들고, 각 칸에 숫자를 1부터 차례대로 채워서 화면에 출력하는 예제
+    </script>
+  </body>
+</html>
