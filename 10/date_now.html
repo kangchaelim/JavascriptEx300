@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date() 생성자 함수로 현재 날짜와 시간 구하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const now = new Date();
+      document.getElementById("show").innerHTML = now;
+
+      // Mon May 12 2025 08:35:39 GMT+0900 (한국 표준시)
+
+      // new 연산자를 사용하는 이유는 Date()가 생성자 함수이기 때문
+      // 자바스크립트에서 Date는 내장 객체이며, 두 가지 방법으로 사용할 수 있다.
+      // new Date() => Date 객체를 생성합니다. 날짜와 시간을 포함한 객체를 반환합니다.
+      // Date()	=> 객체를 생성하지 않고, 현재 날짜와 시간을 문자열로 반환합니다.
+
+      // const now = Date();
+      // console.log(typeof now); // string
+      // 이렇게 하면 now는 단순 문자열이 된다. 즉, Date()는 객체가 아니라 문자열을 반환하므로, 날짜 조작이 불가능
+
+      // new는 생성자 함수로서 Date를 호출해 날짜 객체를 만들기 위한 필수 요소이다.
+      // 그러므로 new Date()처럼 사용해야 시간 정보를 담은 객체를 제대로 활용할 수 있다.
+    </script>
+  </body>
+</html>

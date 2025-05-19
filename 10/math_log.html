@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>log() 메서드로 자연 로그 값 구하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let a = Math.log(2.8);
+      let b = Math.log(1);
+      let c = Math.log("a");
+      let d = Math.log(-3);
+
+      text = "";
+      text += a + "<br>";
+      text += b + "<br>";
+      text += c + "<br>";
+      text += d + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // 1.0296194171811581
+      // 0
+      // NaN
+      // NaN 숫자가 음수인 경우에는 NaN을 반환하고, 0인 경우에는 Infinity를 반환한다.
+    </script>
+  </body>
+</html>

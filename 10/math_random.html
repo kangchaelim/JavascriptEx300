@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>random() 메서드로 무작위 값 구하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let a = Math.random();
+      let b = Math.random();
+      let c = Math.floor(Math.random() * 100 + 1);
+      let d = Math.floor(Math.random() * 100 + 1);
+
+      text = "";
+      text += a + "<br>";
+      text += b + "<br>";
+      text += c + "<br>";
+      text += d + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // Math 객체의 random() 메서드는 0에서 1(1은 포함하지 않음) 사이의 무작위 값을 얻는 데 사용된다.
+      // Math.random()은 0에서 1사이의 무작위 실수를 반환한다. 여기서 끝 경계값인 1은 포함되지 않는다.
+      // Math.floor(Math.random() * 100 + 1)은 1에서 100까지의 정수 중 무작위 숫자 하나를 반환한다.
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set 객체의 delete() 메서드</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const set1 = new Set(["사과", "오렌지", "수박"]);
+      set1.delete("오렌지");
+
+      let text = "";
+      set1.forEach(function (value) {
+        text += value + "<br>";
+      });
+      document.getElementById("show").innerHTML = text;
+      // 사과
+      // 수박
+    </script>
+  </body>
+</html>

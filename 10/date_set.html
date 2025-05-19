@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>날짜와 시간 설정하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const a = new Date(2025, 11, 25, 10, 30, 25);
+      const b = new Date(1988, 8, 13, 18, 20);
+      const c = new Date(2000, 1, 20);
+
+      text = "";
+      text += a + "<br>";
+      text += b + "<br>";
+      text += c;
+      document.getElementById("show").innerHTML = text;
+
+      // Thu Dec 25 2025 10:30:25 GMT+0900 (한국 표준시)
+      // Tue Sep 13 1988 18:20:00 GMT+1000 (한국 하계 표준시)
+      // Sun Feb 20 2000 00:00:00 GMT+0900 (한국 표준시)
+    </script>
+  </body>
+</html>

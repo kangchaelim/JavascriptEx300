@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map 객체의 set() 메서드</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      const pets = new Map();
+      pets.set("강아지", 100);
+      pets.set("고양이", 200);
+      pets.set("앵무새", 300);
+
+      let text = "";
+      pets.forEach(function (value, key) {
+        text += key + " : " + value + "<br>";
+      });
+      document.getElementById("show").innerHTML = text;
+
+      // 강아지 : 100
+      // 고양이 : 200
+      // 앵무새 : 300
+    </script>
+  </body>
+</html>

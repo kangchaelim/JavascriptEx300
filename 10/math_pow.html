@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pow() 메서드로 거듭제곱 값 구하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let a = Math.pow(2, 3);
+      let b = Math.pow(1, 10);
+      let c = Math.pow(-3, 3);
+      let d = Math.pow(2, -2);
+
+      text = "";
+      text += a + "<br>";
+      text += b + "<br>";
+      text += c + "<br>";
+      text += d + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // 8
+      // 1
+      // -27
+      // 0.25
+    </script>
+  </body>
+</html>

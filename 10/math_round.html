@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>round() 메서드로 반올림 값 구하기</title>
+  </head>
+  <body>
+    <p id="show"></p>
+    <script>
+      let a = Math.round(5.8);
+      let b = Math.round(5.3);
+      let c = Math.round(-3.75);
+      let d = Math.round(-3.1);
+
+      text = "";
+      text += a + "<br>";
+      text += b + "<br>";
+      text += c + "<br>";
+      text += d + "<br>";
+      document.getElementById("show").innerHTML = text;
+
+      // 6;
+      // 5
+      // -4
+      // -3
+    </script>
+  </body>
+</html>
